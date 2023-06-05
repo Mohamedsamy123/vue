@@ -1,0 +1,10 @@
+const express = require('express')
+const app = express()
+const bodyparser = require('body-parser')
+ const router = require('./routes/posts')
+app.use(bodyparser.json())
+ app.use('/api/posts' , router)
+app.get('/' , (req ,res)=> {
+    res.send('dfdsd')
+})
+ app.listen(4000)
